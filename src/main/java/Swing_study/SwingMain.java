@@ -12,6 +12,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
 import Swing_study.Component.FrameComponentEx;
+import Swing_study.Component.JButtonEx;
 import Swing_study.Component.JLabelEx;
 import Swing_study.Layout.FrameLayout;
 import Swing_study.Layout.LayoutGuBun;
@@ -113,6 +114,7 @@ public class SwingMain extends JFrame implements ActionListener {
 		pComponent1.add(btn04);
 		
 		btn05 = new JButton("JButton");
+		btn05.addActionListener(this);
 		pComponent1.add(btn05);
 		
 		btn06 = new JButton("JToggleButton");
@@ -120,6 +122,9 @@ public class SwingMain extends JFrame implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btn05) {
+			actionPerformedBtn05(e);
+		}
 		if (e.getSource() == btn04) {
 			actionPerformedBtn04(e);
 		}
@@ -175,6 +180,10 @@ public class SwingMain extends JFrame implements ActionListener {
 	}
 	protected void actionPerformedBtn04(ActionEvent e) {
 		JLabelEx frame = new JLabelEx();
+		frame.setVisible(true);
+	}
+	protected void actionPerformedBtn05(ActionEvent e) {
+		JButtonEx frame = new JButtonEx();
 		frame.setVisible(true);
 	}
 }
