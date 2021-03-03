@@ -34,7 +34,7 @@ public class SwingMain extends JFrame implements ActionListener {
 	private JPanel pComponent1;
 	private JButton btn04;
 	private JButton btn05;
-	private JButton btn06;
+	private JPanel pJCheckRadio;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -113,12 +113,13 @@ public class SwingMain extends JFrame implements ActionListener {
 		btn04.addActionListener(this);
 		pComponent1.add(btn04);
 		
-		btn05 = new JButton("JButton");
+		btn05 = new JButton("JButton & JToggleButton");
 		btn05.addActionListener(this);
 		pComponent1.add(btn05);
 		
-		btn06 = new JButton("JToggleButton");
-		pComponent1.add(btn06);
+		pJCheckRadio = new JPanel();
+		pJCheckRadio.setBorder(new TitledBorder(null, "JCheck & Radio", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		contentPane.add(pJCheckRadio);
 	}
 
 	public void actionPerformed(ActionEvent e) {
