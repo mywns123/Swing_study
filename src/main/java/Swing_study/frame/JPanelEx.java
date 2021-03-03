@@ -3,6 +3,7 @@ package Swing_study.frame;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -20,8 +21,10 @@ public class JPanelEx extends JFrame implements ActionListener {
 	private JButton btnSetDept;
 	private DeptPanel pDept;
 	private JButton btnClear;
+	
 
 	public JPanelEx() {
+		
 		initialize();
 	}
 	private void initialize() {
