@@ -1,23 +1,21 @@
 package Swing_study.Component;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 
 import javax.swing.BoxLayout;
-import javax.swing.JButton;
 import javax.swing.ImageIcon;
-import javax.swing.border.TitledBorder;
-import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JToggleButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 
+@SuppressWarnings("serial")
 public class JButtonEx extends JFrame implements ActionListener {
 
 	private String imgPath = System.getProperty("user.dir") + File.separator + "image" + File.separator;

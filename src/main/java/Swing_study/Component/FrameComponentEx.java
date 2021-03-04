@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class FrameComponentEx extends JFrame implements ActionListener {
 
 	private JPanel contentPane;

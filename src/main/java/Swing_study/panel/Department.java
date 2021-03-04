@@ -1,7 +1,5 @@
 package Swing_study.panel;
 
-import java.util.List;
-
 public class Department {
 	private int deptNo;
 	private String deptName;

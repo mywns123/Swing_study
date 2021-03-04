@@ -1,22 +1,20 @@
 package Swing_study.Component;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import java.awt.FlowLayout;
+import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.File;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import javax.swing.ImageIcon;
-import java.awt.Color;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseEvent;
+import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class JLabelEx extends JFrame implements MouseListener {
 
 	private JPanel contentPane;

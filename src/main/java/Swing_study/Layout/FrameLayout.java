@@ -1,12 +1,12 @@
 package Swing_study.Layout;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class FrameLayout extends JFrame {
 
 	private JPanel contentPane;

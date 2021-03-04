@@ -1,11 +1,11 @@
 package Swing_study.Layout;
 
-import javax.swing.JPanel;
-import java.awt.GridLayout;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
+@SuppressWarnings("serial")
 public class PanelAbsolute extends JPanel {
 	private JTextField textField;
 

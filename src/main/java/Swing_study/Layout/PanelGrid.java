@@ -1,11 +1,13 @@
 package Swing_study.Layout;
 
-import javax.swing.JPanel;
 import java.awt.GridLayout;
+
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+@SuppressWarnings("serial")
 public class PanelGrid extends JPanel {
 	private JTextField tfName;
 	private JTextField tfNO;

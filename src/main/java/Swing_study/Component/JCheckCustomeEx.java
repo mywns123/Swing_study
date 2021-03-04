@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class JCheckCustomeEx extends JFrame implements ItemListener {
 
 	private JPanel contentPane;

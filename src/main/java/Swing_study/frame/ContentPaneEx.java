@@ -1,16 +1,14 @@
 package Swing_study.frame;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.Color;
+import java.awt.FlowLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.FlowLayout;
-import javax.swing.JButton;
-import javax.swing.SwingConstants;
-import java.awt.Color;
 
+@SuppressWarnings("serial")
 public class ContentPaneEx extends JFrame {
 
 	private JPanel contentPane;

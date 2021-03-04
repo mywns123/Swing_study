@@ -26,6 +26,7 @@ import Swing_study.Layout.LayoutGuBun;
 import Swing_study.frame.ContentPaneEx;
 import Swing_study.frame.JPanelEx;
 
+@SuppressWarnings("serial")
 public class SwingMain extends JFrame implements ActionListener {
 
 	private JPanel contentPane;

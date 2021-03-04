@@ -3,7 +3,6 @@ package Swing_study.frame;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,6 +13,7 @@ import javax.swing.border.EmptyBorder;
 import Swing_study.panel.Department;
 import Swing_study.panel.DeptPanel;
 
+@SuppressWarnings("serial")
 public class JPanelEx extends JFrame implements ActionListener {
 
 	private JPanel contentPane;

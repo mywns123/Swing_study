@@ -1,11 +1,13 @@
 package Swing_study.Layout;
 
-import javax.swing.JPanel;
 import java.awt.BorderLayout;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 import java.awt.Color;
 
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+
+@SuppressWarnings("serial")
 public class PanelBorder extends JPanel {
 	
 	public PanelBorder() {

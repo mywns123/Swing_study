@@ -1,12 +1,14 @@
 package Swing_study.panel;
 
-import javax.swing.JPanel;
 import java.awt.GridLayout;
-import javax.swing.border.TitledBorder;
+
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.border.TitledBorder;
 
+@SuppressWarnings("serial")
 public class DeptPanel extends JPanel {
 	private JTextField tfDeptNo;
 	private JTextField tfDeptName;
