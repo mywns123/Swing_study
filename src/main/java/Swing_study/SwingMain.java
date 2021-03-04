@@ -20,6 +20,7 @@ import Swing_study.Component.JButtonEx;
 import Swing_study.Component.JCheckBoxEx;
 import Swing_study.Component.JCheckCustomeEx;
 import Swing_study.Component.JLabelEx;
+import Swing_study.Component.JRadioButtonEx;
 import Swing_study.Layout.FrameLayout;
 import Swing_study.Layout.LayoutGuBun;
 import Swing_study.frame.ContentPaneEx;
@@ -126,7 +127,7 @@ public class SwingMain extends JFrame implements ActionListener {
 		pJCheckRadio = new JPanel();
 		pJCheckRadio.setBorder(new TitledBorder(null, "JCheck & Radio", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		contentPane.add(pJCheckRadio);
-		pJCheckRadio.setLayout(new GridLayout(0, 2, 0, 0));
+		pJCheckRadio.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		btn06 = new JButton("CheckBox");
 		btn06.addActionListener(this);
@@ -134,10 +135,14 @@ public class SwingMain extends JFrame implements ActionListener {
 		pJCheckRadio.add(btn06);
 		
 		btn07 = new JButton("JRadio");
+		btn07.addActionListener(this);
 		pJCheckRadio.add(btn07);
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btn07) {
+			actionPerformedBtn07(e);
+		}
 		if (e.getSource() == btn06) {
 			actionPerformedBtn06(e);
 		}
@@ -217,5 +222,9 @@ public class SwingMain extends JFrame implements ActionListener {
 		JCheckCustomeEx frame1 = new JCheckCustomeEx(list);
 		
 		frame1.setVisible(true);
+	}
+	protected void actionPerformedBtn07(ActionEvent e) {
+		JRadioButtonEx frame = new JRadioButtonEx();
+		frame.setVisible(true);
 	}
 }
