@@ -21,10 +21,12 @@ import Swing_study.Component.JCheckBoxEx;
 import Swing_study.Component.JCheckCustomeEx;
 import Swing_study.Component.JLabelEx;
 import Swing_study.Component.JRadioButtonEx;
+import Swing_study.Component.JTextFieldAreaEx;
 import Swing_study.Layout.FrameLayout;
 import Swing_study.Layout.LayoutGuBun;
 import Swing_study.frame.ContentPaneEx;
 import Swing_study.frame.JPanelEx;
+import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
 public class SwingMain extends JFrame implements ActionListener {
@@ -43,6 +45,8 @@ public class SwingMain extends JFrame implements ActionListener {
 	private JPanel pJCheckRadio;
 	private JButton btn06;
 	private JButton btn07;
+	private JPanel pTEXT;
+	private JButton btn08;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -64,7 +68,7 @@ public class SwingMain extends JFrame implements ActionListener {
 	private void initialize() {
 		setTitle("스윙 스터디");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(10, 10, 700, 450);
+		setBounds(10, 10, 700, 684);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -138,9 +142,20 @@ public class SwingMain extends JFrame implements ActionListener {
 		btn07 = new JButton("JRadio");
 		btn07.addActionListener(this);
 		pJCheckRadio.add(btn07);
+		
+		pTEXT = new JPanel();
+		pTEXT.setBorder(new TitledBorder(null, "텍스트 필드", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		contentPane.add(pTEXT);
+		
+		btn08 = new JButton("JTextField 예제");
+		btn08.addActionListener(this);
+		pTEXT.add(btn08);
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btn08) {
+			actionPerformedBtn08(e);
+		}
 		if (e.getSource() == btn07) {
 			actionPerformedBtn07(e);
 		}
@@ -226,6 +241,10 @@ public class SwingMain extends JFrame implements ActionListener {
 	}
 	protected void actionPerformedBtn07(ActionEvent e) {
 		JRadioButtonEx frame = new JRadioButtonEx();
+		frame.setVisible(true);
+	}
+	protected void actionPerformedBtn08(ActionEvent e) {
+		JTextFieldAreaEx frame = new JTextFieldAreaEx();
 		frame.setVisible(true);
 	}
 }
