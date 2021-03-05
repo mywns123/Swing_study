@@ -20,6 +20,9 @@ repositories {
 }
 
 dependencies {
+// https://mvnrepository.com/artifact/com.toedter/jcalendar
+implementation group: 'com.toedter', name: 'jcalendar', version: '1.4'
+
 //  https://mvnrepository.com/artifact/mysql/mysql-connector-java
 //	implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.49'
     testImplementation 'junit:junit:4.13'
