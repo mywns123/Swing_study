@@ -4,7 +4,7 @@ public class Department {
 	private int deptNo;
 	private String deptName;
 	private int floor;
-	
+
 //	private List<Employee> list;
 
 	public Department(int deptNo, String deptName) {
@@ -12,16 +12,13 @@ public class Department {
 		this.deptName = deptName;
 	}
 
-
 	public Department() {
 		// TODO Auto-generated constructor stub
 	}
-	
 
 	public Department(int deptNo) {
 		this.deptNo = deptNo;
 	}
-
 
 	public Department(int deptNo, String deptName, int floor) {
 		this.deptNo = deptNo;
@@ -53,12 +50,9 @@ public class Department {
 		this.floor = floor;
 	}
 
-
 	@Override
 	public String toString() {
-		return String.format("Department [deptNo=%s, deptName=%s, floor=%s]", deptNo, deptName, floor);
+		return String.format("%s(%d)", deptName, deptNo);
 	}
-
-	
 
 }
