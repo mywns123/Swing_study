@@ -7,16 +7,19 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.border.EmptyBorder;
 
 import Swing_study.panel.Department;
 import Swing_study.panel.DeptPanel;
+import Swing_study.panel.Employee;
+import Swing_study.panel.EmployeePanel;
 import Swing_study.panel.Title;
 import Swing_study.panel.TitlePanel;
-import Swing_study.panel.EmployeePanel;
 
+@SuppressWarnings("serial")
 public class JTabbedPaneEx extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
@@ -65,15 +68,23 @@ public class JTabbedPaneEx extends JFrame implements ActionListener {
 		Component comp = tabbedPane.getSelectedComponent();
 		//System.out.println(comp);
 		// get XX()
-		String text = comp.getName();
-		System.out.println(text);
+		String text = comp.getClass().getName();
 		switch(text) {
-		case "부서":
+		case "Swing_study.panel.DeptPanel":
 			DeptPanel deptpanel = (DeptPanel) comp;
 			Department department = deptpanel.getDepartment();
-		case "직책":
+			JOptionPane.showMessageDialog(null, department);
+		case "Swing_study.panel.TitlePanel":
 			TitlePanel titlepanel = (TitlePanel) comp;
 			Title title = titlepanel.getTitle();
+			JOptionPane.showMessageDialog(null, title);
+		case "Swing_study.panel.EmployeePanel":
+			EmployeePanel employeepanel = (EmployeePanel) comp;
+			Employee employee = employeepanel.getEmployee();
+			JOptionPane.showMessageDialog(null, employee);	
+			
+			
+			
 		}
 		
 		

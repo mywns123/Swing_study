@@ -2,20 +2,29 @@ package Swing_study.panel;
 
 import javax.swing.JPanel;
 import java.awt.GridLayout;
+import java.io.File;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.JComboBox;
 import javax.swing.JSpinner;
 import javax.swing.JPasswordField;
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
 
 public class EmployeePanel extends JPanel {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JPasswordField passwordField;
+	private String imgPath = System.getProperty("user.dir") + File.separator + "image" + File.separator;
 
 	
 	public EmployeePanel() {
@@ -23,10 +32,29 @@ public class EmployeePanel extends JPanel {
 		initialize();
 	}
 	private void initialize() {
-		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel = new JPanel();
-		add(panel);
+		add(panel, BorderLayout.NORTH);
+		panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setAlignmentX(1.0f);
+		panel_2.setBorder(new EmptyBorder(50, 100, 0, 100));
+		panel.add(panel_2);
+		panel_2.setLayout(new BorderLayout(0, 0));
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setIcon(new ImageIcon(imgPath + "1.jpg"));
+		panel_2.add(lblNewLabel_2, BorderLayout.CENTER);
+		
+		JPanel panel_3 = new JPanel();
+		panel_2.add(panel_3, BorderLayout.SOUTH);
+		panel_3.setLayout(new BorderLayout(0, 0));
+		
+		JButton btnAdd = new JButton("사진 추가");
+		panel_3.add(btnAdd, BorderLayout.SOUTH);
 		
 		JPanel panel_1 = new JPanel();
 		add(panel_1);
@@ -102,6 +130,9 @@ public class EmployeePanel extends JPanel {
 		panel_1.add(label_8);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setOpaque(true);
+		lblNewLabel_1.setForeground(Color.RED);
 		panel_1.add(lblNewLabel_1);
 	}
 
