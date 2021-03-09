@@ -74,17 +74,17 @@ public class JTabbedPaneEx extends JFrame implements ActionListener {
 			DeptPanel deptpanel = (DeptPanel) comp;
 			Department department = deptpanel.getDepartment();
 			JOptionPane.showMessageDialog(null, department);
+			break;
 		case "Swing_study.panel.TitlePanel":
 			TitlePanel titlepanel = (TitlePanel) comp;
 			Title title = titlepanel.getTitle();
 			JOptionPane.showMessageDialog(null, title);
+			break;
 		case "Swing_study.panel.EmployeePanel":
 			EmployeePanel employeepanel = (EmployeePanel) comp;
 			Employee employee = employeepanel.getEmployee();
 			JOptionPane.showMessageDialog(null, employee);	
-			
-			
-			
+			break;
 		}
 		
 		
