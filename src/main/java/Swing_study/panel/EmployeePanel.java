@@ -2,6 +2,7 @@ package Swing_study.panel;
 
 import javax.swing.JPanel;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.io.File;
 
 import javax.swing.JLabel;
@@ -18,6 +19,8 @@ import javax.swing.JButton;
 import java.awt.BorderLayout;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
+import javax.swing.border.TitledBorder;
+import java.awt.Dimension;
 
 public class EmployeePanel extends JPanel {
 	private JTextField textField;
@@ -25,36 +28,40 @@ public class EmployeePanel extends JPanel {
 	private JTextField textField_2;
 	private JPasswordField passwordField;
 	private String imgPath = System.getProperty("user.dir") + File.separator + "image" + File.separator;
-
-	
+		
 	public EmployeePanel() {
 
 		initialize();
 	}
 	private void initialize() {
+		setBorder(new TitledBorder(null, "사원 정보", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		setLayout(new BorderLayout(0, 0));
 		
-		JPanel panel = new JPanel();
-		add(panel, BorderLayout.NORTH);
-		panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+		JPanel pTop = new JPanel();
+		add(pTop, BorderLayout.NORTH);
+		pTop.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
-		JPanel panel_2 = new JPanel();
-		panel_2.setAlignmentX(1.0f);
-		panel_2.setBorder(new EmptyBorder(50, 100, 0, 100));
-		panel.add(panel_2);
-		panel_2.setLayout(new BorderLayout(0, 0));
+		JPanel pImg = new JPanel();
+		pImg.setBorder(new EmptyBorder(0, 0, 0, 0));
+		pTop.add(pImg);
+		pImg.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setIcon(new ImageIcon(imgPath + "1.jpg"));
-		panel_2.add(lblNewLabel_2, BorderLayout.CENTER);
+		ImageIcon icon = new ImageIcon(imgPath + "1.jpg");
+		Image img = icon.getImage();
+		Image img1 = img.getScaledInstance(100, 120, Image.SCALE_SMOOTH);
+		ImageIcon icon1 = new ImageIcon(img1);
+		JLabel lblImg = new JLabel(icon1);		
+		lblImg.setHorizontalAlignment(SwingConstants.CENTER);		
+		lblImg.setIcon(new ImageIcon(imgPath + "1.jpg"));
+		lblImg.setPreferredSize(new Dimension(100, 120));
+		pImg.add(lblImg, BorderLayout.CENTER);
 		
-		JPanel panel_3 = new JPanel();
-		panel_2.add(panel_3, BorderLayout.SOUTH);
-		panel_3.setLayout(new BorderLayout(0, 0));
+		JPanel pAdd = new JPanel();
+		pImg.add(pAdd, BorderLayout.SOUTH);
+		pAdd.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
 		JButton btnAdd = new JButton("사진 추가");
-		panel_3.add(btnAdd, BorderLayout.SOUTH);
+		pAdd.add(btnAdd);
 		
 		JPanel panel_1 = new JPanel();
 		add(panel_1);

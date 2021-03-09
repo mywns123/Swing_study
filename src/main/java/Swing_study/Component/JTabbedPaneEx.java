@@ -25,6 +25,9 @@ public class JTabbedPaneEx extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JButton btnConfirm;
 	private JTabbedPane tabbedPane;
+	private DeptPanel pDept;
+	private TitlePanel pTitle;
+	private EmployeePanel pEmp;
 
 	public JTabbedPaneEx() {
 		initialize();
@@ -41,13 +44,13 @@ public class JTabbedPaneEx extends JFrame implements ActionListener {
 		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		contentPane.add(tabbedPane, BorderLayout.CENTER);
 		
-		DeptPanel pDept = new DeptPanel();
+		pDept = new DeptPanel();
 		tabbedPane.addTab("부서", null, pDept, "부서관리");
 		
-		TitlePanel pTitle = new TitlePanel();
+		pTitle = new TitlePanel();
 		tabbedPane.addTab("직책", null, pTitle, "직책관리");
 		
-		EmployeePanel pEmp = new EmployeePanel();
+		pEmp = new EmployeePanel();
 		tabbedPane.addTab("사원", null, pEmp, "사원관리");
 		
 		JPanel panel = new JPanel();
@@ -68,6 +71,29 @@ public class JTabbedPaneEx extends JFrame implements ActionListener {
 		Component comp = tabbedPane.getSelectedComponent();
 		//System.out.println(comp);
 		// get XX()
+		
+		if(comp == pDept) {
+			DeptPanel deptpanel = (DeptPanel) comp;
+			Department department = deptpanel.getDepartment();
+			JOptionPane.showMessageDialog(null, department);
+		}else if(comp == pTitle){
+			TitlePanel titlepanel = (TitlePanel) comp;
+			Title title = titlepanel.getTitle();
+			JOptionPane.showMessageDialog(null, title);
+		}else if(comp == pEmp) {
+			EmployeePanel employeepanel = (EmployeePanel) comp;
+			Employee employee = employeepanel.getEmployee();
+			JOptionPane.showMessageDialog(null, employee);	
+		}
+		
+			
+		
+		
+		
+		
+		
+		
+		/*
 		String text = comp.getClass().getName();
 		switch(text) {
 		case "Swing_study.panel.DeptPanel":
@@ -84,10 +110,9 @@ public class JTabbedPaneEx extends JFrame implements ActionListener {
 			EmployeePanel employeepanel = (EmployeePanel) comp;
 			Employee employee = employeepanel.getEmployee();
 			JOptionPane.showMessageDialog(null, employee);	
-			break;
-		}
-		
-		
+			break;			
+		}		
+		*/
 		
 		
 		
