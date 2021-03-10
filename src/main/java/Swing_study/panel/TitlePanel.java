@@ -40,8 +40,8 @@ public class TitlePanel extends JPanel {
 	}
 
 	public void setTitle(Title title) {
-		tftNO.setText(Title.gettNo()+"");
-		tftName.setText(Title.gettName()+"");
+		tftNO.setText(title.gettNo()+"");
+		tftName.setText(title.gettName()+"");
 	}
 
 	public Title getTitle() {

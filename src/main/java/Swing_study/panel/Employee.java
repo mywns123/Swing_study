@@ -10,6 +10,10 @@ public class Employee {
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
+	public Employee(int empNo, String empName) {
+		this.empNo = empNo;
+		this.empName = empName;
+	}
 	public Employee(int empNo) {
 		this.empNo = empNo;
 	}
@@ -21,9 +25,7 @@ public class Employee {
 		this.salary = salary;
 		this.dept = dept;
 	}
-	public Employee(int empNo, String empName) {
-		// TODO Auto-generated constructor stub
-	}
+	
 	
 	public int getEmpNo() {
 		return empNo;

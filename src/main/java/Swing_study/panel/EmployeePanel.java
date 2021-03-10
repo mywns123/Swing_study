@@ -48,8 +48,8 @@ public class EmployeePanel extends JPanel {
 		
 		ImageIcon icon = new ImageIcon(imgPath + "1.jpg");
 		Image img = icon.getImage();
-		Image img1 = img.getScaledInstance(100, 120, Image.SCALE_SMOOTH);
-		ImageIcon icon1 = new ImageIcon(img1);
+		Image imgchange = img.getScaledInstance(100, 120, Image.SCALE_SMOOTH);
+		ImageIcon icon1 = new ImageIcon(imgchange);
 		JLabel lblImg = new JLabel(icon1);		
 		lblImg.setHorizontalAlignment(SwingConstants.CENTER);
 		lblImg.setPreferredSize(new Dimension(100, 120));

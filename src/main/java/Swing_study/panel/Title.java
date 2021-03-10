@@ -2,11 +2,10 @@ package Swing_study.panel;
 
 public class Title {
 
-	private static int tNo;
-	private static String tName;
+	private  int tNo;
+	private  String tName;
 
 	public Title() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Title(int tNo) {
@@ -23,7 +22,8 @@ public class Title {
 		this.tName = tName;
 	}
 
-	public static int gettNo() {
+	
+	public int gettNo() {
 		return tNo;
 	}
 
@@ -31,7 +31,7 @@ public class Title {
 		this.tNo = tNo;
 	}
 
-	public static String gettName() {
+	public String gettName() {
 		return tName;
 	}
 
