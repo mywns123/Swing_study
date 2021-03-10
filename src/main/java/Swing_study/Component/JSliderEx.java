@@ -1,19 +1,18 @@
 package Swing_study.Component;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.Color;
+import java.awt.GridLayout;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import java.awt.CardLayout;
-import java.awt.GridLayout;
+import javax.swing.JPanel;
 import javax.swing.JSlider;
-import java.awt.Color;
-import javax.swing.event.ChangeListener;
+import javax.swing.border.EmptyBorder;
 import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
+@SuppressWarnings("serial")
 public class JSliderEx extends JFrame implements ChangeListener {
 
 	private JPanel contentPane;

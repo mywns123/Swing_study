@@ -24,10 +24,10 @@ import com.toedter.calendar.JDateChooser;
 public class EmployeePanelttttttt extends JPanel {
 	private JTextField tfNo;
 	private JTextField tfName;
-	private JComboBox cmbTitle;
-	private JComboBox cmbManager;
+	private JComboBox<String> cmbTitle;
+	private JComboBox<String> cmbManager;
 	private JSpinner spinSalary;
-	private JComboBox cmbDept;
+	private JComboBox<String> cmbDept;
 	private JDateChooser dateHire;
 	private JPasswordField pfPass1;
 	private JTextField pfPass2;
@@ -64,14 +64,14 @@ public class EmployeePanelttttttt extends JPanel {
 		lblTitle.setHorizontalAlignment(SwingConstants.RIGHT);
 		pItem.add(lblTitle);
 		
-		cmbTitle = new JComboBox();
+		cmbTitle = new JComboBox<>();
 		pItem.add(cmbTitle);
 		
 		JLabel lblManager = new JLabel("직속상사");
 		lblManager.setHorizontalAlignment(SwingConstants.RIGHT);
 		pItem.add(lblManager);
 		
-		cmbManager = new JComboBox();
+		cmbManager = new JComboBox<>();
 		pItem.add(cmbManager);
 		
 		JLabel lblSalary = new JLabel("급여");
@@ -85,7 +85,7 @@ public class EmployeePanelttttttt extends JPanel {
 		lblDept.setHorizontalAlignment(SwingConstants.RIGHT);
 		pItem.add(lblDept);
 		
-		cmbDept = new JComboBox();
+		cmbDept = new JComboBox<>();
 		pItem.add(cmbDept);
 		
 		JLabel lblHireDate = new JLabel("입사일");

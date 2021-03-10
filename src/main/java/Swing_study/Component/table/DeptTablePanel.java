@@ -14,6 +14,7 @@ import javax.swing.table.TableColumnModel;
 
 import Swing_study.panel.Department;
 
+@SuppressWarnings("serial")
 public class DeptTablePanel extends JPanel {
 	private JTable table;
 

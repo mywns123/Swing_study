@@ -1,33 +1,37 @@
 package Swing_study.panel;
 
-import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.io.File;
 
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
-import javax.swing.SwingConstants;
-import com.toedter.calendar.JDateChooser;
-import javax.swing.JComboBox;
-import javax.swing.JSpinner;
-import javax.swing.JPasswordField;
-import java.awt.FlowLayout;
 import javax.swing.JButton;
-import java.awt.BorderLayout;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-import java.awt.Color;
 import javax.swing.border.TitledBorder;
-import java.awt.Dimension;
 
+import com.toedter.calendar.JDateChooser;
+
+@SuppressWarnings("serial")
 public class EmployeePanel extends JPanel {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JPasswordField passwordField;
 	private String imgPath = System.getProperty("user.dir") + File.separator + "image" + File.separator;
+	private JComboBox<String> comboBox;
+	private JComboBox<String> comboBox_1;
+	private JComboBox<String> comboBox_2;
 		
 	public EmployeePanel() {
 
@@ -94,14 +98,14 @@ public class EmployeePanel extends JPanel {
 		label_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		panel_1.add(label_2);
 		
-		JComboBox comboBox = new JComboBox();
+		comboBox = new JComboBox<>();
 		panel_1.add(comboBox);
 		
 		JLabel label_4 = new JLabel("직속상사");
 		label_4.setHorizontalAlignment(SwingConstants.RIGHT);
 		panel_1.add(label_4);
 		
-		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1 = new JComboBox<>();
 		panel_1.add(comboBox_1);
 		
 		JLabel label_3 = new JLabel("급여");
@@ -115,7 +119,7 @@ public class EmployeePanel extends JPanel {
 		label_5.setHorizontalAlignment(SwingConstants.RIGHT);
 		panel_1.add(label_5);
 		
-		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2 = new JComboBox<>();
 		panel_1.add(comboBox_2);
 		
 		JLabel label_6 = new JLabel("입사일");

@@ -1,29 +1,25 @@
 package Swing_study.Component;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-import java.awt.GraphicsConfiguration;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Swing_study.panel.Department;
-import java.awt.GridLayout;
-
-import javax.swing.ComboBoxModel;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JButton;
 import Swing_study.panel.DeptPanel;
-import javax.swing.JComboBox;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Vector;
-import java.awt.event.ActionEvent;
 
+@SuppressWarnings("serial")
 public class JComboBoxEx3 extends JFrame implements ActionListener {
 
 	private JPanel contentPane;

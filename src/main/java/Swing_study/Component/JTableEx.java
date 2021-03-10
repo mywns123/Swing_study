@@ -22,8 +22,11 @@ import Swing_study.Component.table.Student;
 import Swing_study.Component.table.TitleTablePanel;
 import Swing_study.panel.Department;
 import Swing_study.panel.Employee;
+import Swing_study.panel.Laundry;
 import Swing_study.panel.Title;
+import Swing_study.Component.table.LaundryTablePanel;
 
+@SuppressWarnings("serial")
 public class JTableEx extends JFrame {
 
 	private JPanel contentPane;
@@ -32,6 +35,7 @@ public class JTableEx extends JFrame {
 	private List<Department> deptList = new ArrayList<>();
 	private List<Title> titleList = new ArrayList<>();
 	private List<Employee> empList = new ArrayList<>();
+	private List<Laundry> laundryList = new ArrayList<>();
 	
 	
 	public JTableEx() {
@@ -52,6 +56,8 @@ public class JTableEx extends JFrame {
 		empList.add(new Employee(1, "김상건", titleList.get(1), null, 4500000, deptList.get(0)));
 		empList.add(new Employee(2, "이성래", titleList.get(0), new Employee(1,"김상건"), 1500000,deptList.get(0)));
 		empList.add(new Employee(3, "이태훈", titleList.get(1), new Employee(1,"김상건"), 2000000,deptList.get(0)));
+		
+		laundryList.add(new Laundry(1, "임준엽", "외투", "AAA", "B", 50000));
 		
 		initialize();
 	}
@@ -108,13 +114,17 @@ public class JTableEx extends JFrame {
 		contentPane.add(pTable5);
 		pTable5.setLayout(new BorderLayout(0, 0));
 		
-		EmpTablePanel pEmpTable = new EmpTablePanel();
-		
+		EmpTablePanel pEmpTable = new EmpTablePanel();		
 		pTable5.add(pEmpTable, BorderLayout.CENTER);
 		pEmpTable.setList(empList);
+		
 		JPanel pTable6 = new JPanel();
 		contentPane.add(pTable6);
 		pTable6.setLayout(new BorderLayout(0, 0));
+		
+		LaundryTablePanel panel = new LaundryTablePanel();
+		pTable6.add(panel, BorderLayout.CENTER);
+		panel.setList(laundryList);
 	}
 	public DefaultTableModel getModel() {
 		CustomTableModel model = new CustomTableModel(getData(), getColumnNames());

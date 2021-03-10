@@ -9,6 +9,7 @@ import javax.swing.UIManager;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 
+@SuppressWarnings("serial")
 public class TitlePanel extends JPanel {
 	private JTextField tftNO;
 	private JTextField tftName;

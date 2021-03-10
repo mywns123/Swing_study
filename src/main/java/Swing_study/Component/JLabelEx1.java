@@ -1,18 +1,16 @@
 package Swing_study.Component;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.io.File;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class JLabelEx1 extends JFrame {
 
 	private JPanel contentPane;

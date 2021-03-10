@@ -4,6 +4,7 @@ import javax.swing.SwingConstants;
 
 import Swing_study.panel.Title;
 
+@SuppressWarnings("serial")
 public class TitleTablePanel extends AbstractCustomTablePanel<Title> {
 
 	@Override

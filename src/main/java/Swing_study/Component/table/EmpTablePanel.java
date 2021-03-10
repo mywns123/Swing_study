@@ -4,6 +4,7 @@ import javax.swing.SwingConstants;
 
 import Swing_study.panel.Employee;
 
+@SuppressWarnings("serial")
 public class EmpTablePanel extends AbstractCustomTablePanel<Employee> {
 
 	@Override
