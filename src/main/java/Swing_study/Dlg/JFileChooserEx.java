@@ -68,7 +68,7 @@ public class JFileChooserEx extends JFrame implements ActionListener {
 			img.createNewFile();
 			img = (File) lblImg.getIcon();
 		}else {
-			
+//			download.mkdir();
 			File img1 = new File(path,"img.jpg");
 			img1.createNewFile();
 			img1 = (File) lblImg.getIcon();
