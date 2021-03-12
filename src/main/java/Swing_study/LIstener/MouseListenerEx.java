@@ -1,15 +1,14 @@
 package Swing_study.LIstener;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
 
+@SuppressWarnings("serial")
 public class MouseListenerEx extends JFrame {
 
 	private JPanel contentPane;
